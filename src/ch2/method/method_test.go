@@ -20,3 +20,18 @@ func TestVertext (t *testing.T) {
 	fmt.Println(v.Abs())
 }
 
+//=========================
+type MyFloat float64
+func (f MyFloat) Abs2() float64{
+	if f < 0 {
+		return float64(-f)
+	}
+	return float64(f)
+}
+
+func TestMyType(t *testing.T) {
+	f := MyFloat(-math.Sqrt2)
+
+	fmt.Println(f.Abs2())
+}
+
