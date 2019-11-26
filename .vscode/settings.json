@@ -1,4 +1,6 @@
 {
-    "go.testFlags": ["-v"],
-    "editor.formatOnSave": false
+    "go.testFlags": [
+        "-v"
+    ],
+	"editor.formatOnSave": false
 }
