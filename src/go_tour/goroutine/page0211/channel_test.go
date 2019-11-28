@@ -1,4 +1,4 @@
-package chantest
+package xxtest
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 
 func sum(s []int, c chan int) {
 	sum := 0
-	for _, v: = range s {
+	for _, v := range s {
 		sum += v
 	}
 
