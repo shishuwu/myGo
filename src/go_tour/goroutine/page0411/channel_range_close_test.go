@@ -18,7 +18,6 @@ func fib(n int, c chan int){
 
 func Test(t *testing.T){
 	c := make(chan int, 10)
-
 	// go fib(10, c)
 	go fib(cap(c), c)
 
