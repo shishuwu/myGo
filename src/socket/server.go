@@ -1,9 +1,9 @@
-package sockettest
+package main
 
 import (
 	"log"
 	"net"
-	"testing"
+	"fmt"
 )
 
 
@@ -16,6 +16,7 @@ func main ()  {
 	defer socket.Close()
 
 	for {
+		fmt.Println("starting to listen...")
 		conn, err := socket.Accept()
 		if err != nil {
 			log.Panicln(err)
@@ -33,11 +34,11 @@ func handleRequest(conn net.Conn) {
 		if err != nil {
 			return
 		}
-
+		fmt.Println(buf[:size])
 		conn.Write(buf[:size])
 	}
 }
 
-func Test(t *testing.T){
-	main()
-}
+// func Test(t *testing.T){
+// 	main()
+// }
