@@ -15,8 +15,8 @@ func main ()  {
 
 	defer socket.Close()
 
+	fmt.Println("starting to listen...")
 	for {
-		fmt.Println("starting to listen...")
 		conn, err := socket.Accept()
 		if err != nil {
 			log.Panicln(err)
@@ -34,7 +34,7 @@ func handleRequest(conn net.Conn) {
 		if err != nil {
 			return
 		}
-		fmt.Println(buf[:size])
+		fmt.Printf("%s",buf[:size])
 		conn.Write(buf[:size])
 	}
 }
