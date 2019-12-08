@@ -6,18 +6,20 @@ import(
 	"time"
 )
 
-func work() (chan int) {
-	done := make(chan int, 1)
+func work( done chan int) {
+	
 	fmt.Println("work")
-	time.Sleep(time.Second)
+	time.Sleep(3 * time.Second)
 	fmt.Println("done")
 	
 	done <- 1
-
-	return done
 }
 
 
 func Test(t *testing.T)  {
-	done := go work()
+	done := make(chan int, 1)
+
+	go work(done)
+
+	<- done
 }
