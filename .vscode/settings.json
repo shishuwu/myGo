@@ -2,5 +2,6 @@
     "go.testFlags": [
         "-v"
     ],
-	"editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "http.proxy": "http://proxy.austin.hpicorp.net:8080"
 }
