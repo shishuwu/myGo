@@ -3,5 +3,6 @@
         "-v"
     ],
     "editor.formatOnSave": false,
-    "http.proxy": "http://proxy.austin.hpicorp.net:8080"
+    "http.proxy": "http://proxy.austin.hpicorp.net:8080",
+    //"go.formatTool": "goformat"
 }
